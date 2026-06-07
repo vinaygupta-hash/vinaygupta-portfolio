@@ -120,41 +120,34 @@ body{
 
 .dashboard-grid{
     display: grid;
-
-    grid-template-columns:
-    repeat(auto-fit, minmax(250px, 1fr));
-
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
-
     padding-bottom: 80px;
 }
 
 /* CARD */
 
 .card{
-    height: 180px;
-
     background: rgba(255,255,255,0.05);
-
     border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 280px;
+
+    overflow: hidden;
+    position: relative;
 
     backdrop-filter: blur(12px);
 
-    border-radius: 30px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-decoration: none;
+    color: white;
 
     cursor: pointer;
 
     transition: all 0.35s ease;
-
-    position: relative;
-    overflow: hidden;
-
-    text-decoration: none;
-    color: white;
 }
 
 .card::before{
@@ -165,25 +158,80 @@ body{
     width: 200px;
     height: 200px;
 
+    top: -50px;
+    right: -50px;
+
     background:
     radial-gradient(
         rgba(102,217,255,0.15),
         transparent
     );
-
-    top: -50px;
-    right: -50px;
 }
 
 .card:hover{
     transform: translateY(-10px);
 
-    border-color: rgba(102,217,255,0.4);
+    border-color:
+    rgba(102,217,255,0.4);
 
     box-shadow:
-        0 15px 40px rgba(102,217,255,0.15);
+    0 15px 40px rgba(102,217,255,0.15);
 }
 
+.card h3{
+    font-size: 1.3rem;
+    text-align: center;
+    z-index: 2;
+}
+
+/* CARD IMAGE */
+
+.card-image{
+    width: 100%;
+    aspect-ratio: 16/9;
+
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s ease;
+}
+
+.card:hover .card-image img{
+    transform: scale(1.08);
+}
+
+.card-image::after{
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(15,15,15,0.9),
+        rgba(15,15,15,0.1)
+    );
+}
+
+/* CARD CONTENT */
+
+.card-content{
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
 .card h3{
     font-size: 1.3rem;
     z-index: 2;
