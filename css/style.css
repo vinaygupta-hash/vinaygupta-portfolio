@@ -72,15 +72,48 @@ body{
 }
 
 .nav-links a{
-    text-decoration: none;
-    color: white;
+    position: relative;
 
-    transition: 0.3s ease;
+    text-decoration: none;
+
+    color: #ffffff;
+
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after{
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -6px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        #66d9ff,
+        #8a2be2
+    );
+
+    transform: translateX(-50%);
+
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after{
+    width: 100%;
 }
 
 .nav-links a:hover{
     color: #66d9ff;
 }
+
+
 
 /* MAIN CONTAINER */
 
@@ -114,30 +147,8 @@ body{
 
     margin-bottom: 25px;
     box-shadow:
-        0 0 20px rgba(102,217,255,0.4),
+        0 0 10px rgba(102,217,255,0.4),
         0 0 40px rgba(102,217,255,0.2);
-}
-
-@keyframes pulseGlow{
-
-    0%,100%{
-        box-shadow:
-            0 0 20px rgba(102,217,255,0.4),
-            0 0 40px rgba(102,217,255,0.2);
-    }
-
-    50%{
-        box-shadow:
-            0 0 35px rgba(102,217,255,0.7),
-            0 0 70px rgba(102,217,255,0.4);
-    }
-
-}
-
-.profile-image{
-    animation:
-        float 7s ease-in-out infinite,
-        pulseGlow 7s ease-in-out infinite;
 }
 
 .hero h1{
@@ -194,7 +205,10 @@ body{
 
     cursor: pointer;
 
-    transition: all 0.35s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .card::before{
@@ -216,13 +230,15 @@ body{
 }
 
 .card:hover{
-    transform: translateY(-10px);
 
-    border-color:
-    rgba(102,217,255,0.4);
+    transform: translateY(-8px);
+
+    border-color: rgba(102,217,255,0.5);
 
     box-shadow:
-    0 15px 40px rgba(102,217,255,0.15);
+        0 15px 35px rgba(0,0,0,0.4),
+        0 0 20px rgba(102,217,255,0.15);
+
 }
 
 .card h3{
@@ -247,12 +263,10 @@ body{
 
     object-fit: cover;
 
-    transition: 0.4s ease;
+    
 }
 
-.card:hover .card-image img{
-    transform: scale(1.08);
-}
+
 
 .card-image::after{
     content: "";
