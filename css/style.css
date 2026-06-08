@@ -873,7 +873,8 @@ body{
 }
 
 .status-badge{
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
 
     margin-top: 15px;
     margin-bottom: 20px;
@@ -893,7 +894,59 @@ body{
 
     font-size: 0.9rem;
     font-weight: 600;
+
+    position: relative;
 }
+
+.status-badge::before{
+    content: "";
+
+    width: 10px;
+    height: 10px;
+
+    margin-right: 10px;
+
+    border-radius: 50%;
+
+    background: #00ff88;
+
+    box-shadow:
+        0 0 10px #00ff88,
+        0 0 20px #00ff88;
+
+    animation: statusPulse 1.8s infinite;
+}
+
+@keyframes statusPulse{
+
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50%{
+        transform: scale(1.4);
+        opacity: 0.7;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+.status-badge:hover{
+    box-shadow:
+        0 0 15px rgba(102,217,255,0.4),
+        0 0 30px rgba(102,217,255,0.15);
+
+    transform: translateY(-2px);
+
+    transition: all 0.3s ease;
+}
+
+
 
 body::before{
     content: "";
