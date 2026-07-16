@@ -44,7 +44,7 @@ https://vinaygupta-hash.github.io/vinaygupta-portfolio/
 
 ## 🛠 Tech Stack
 
-### Frontend
+## 📂 Project Structure
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
@@ -76,22 +76,8 @@ https://vinaygupta-hash.github.io/vinaygupta-portfolio/
 ```text
 vinaygupta-portfolio/
 │
-├── index.html
-├── about.html
-├── skills.html
-├── projects.html
-├── certifications.html
-├── contact.html
-│
-├── css/
-│   └── style.css
-│
-├── js/
-│   └── main.js
-│
-├── images/
-│
-└── assets/
+├── kalyani.py
+└── README.md
 ```
 
 ---
