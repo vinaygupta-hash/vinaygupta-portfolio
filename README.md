@@ -76,8 +76,22 @@ https://vinaygupta-hash.github.io/vinaygupta-portfolio/
 ```text
 vinaygupta-portfolio/
 │
-├── kalyani.py
-└── README.md
+├── index.html
+├── about.html
+├── skills.html
+├── projects.html
+├── certifications.html
+├── contact.html
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── main.js
+│
+├── images/
+│
+└── assets/
 ```
 
 ---
