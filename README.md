@@ -1,85 +1,91 @@
-# Vinay Gupta Portfolio
+# 🎵 Learning Through Music
 
-A modern portfolio website built using HTML, CSS and JavaScript to showcase my skills, projects, certifications and journey as an aspiring software engineer.
+> *Where Python meets rhythm.*
 
-## Live Demo
+A simple Python project that recreates a karaoke-style terminal experience by displaying timed lyrics with a smooth typewriter animation. Built using only Python's standard library, this project demonstrates how timing, loops, and terminal output can be combined to create engaging console animations.
 
-Coming Soon
+---
 
-## Features
+## ✨ Features
 
-- Modern Apple-inspired UI
-- Responsive Design
-- Skills Showcase
-- Project Portfolio
-- Certifications Section
-- Resume Download
-- Contact Information
+* 🎤 Synchronized lyric display
+* ⌨️ Typewriter animation
+* ⏱ Timestamp-based timing system
+* 🐍 Built using only Python's built-in modules (`sys` and `time`)
+* 💻 Lightweight and beginner-friendly
 
-## Technologies Used
+---
 
-### Frontend
+## 📂 Project Structure
 
-- HTML5
-- CSS3
-- JavaScript
-
-### Backend Knowledge
-
-- Python
-- Flask
-- SQLite
-
-### Data Analysis
-
-- Pandas
-- NumPy
-- Matplotlib
-- Tableau
-
-### Tools
-
-- Git
-- GitHub
-- VS Code
-
-## Project Structure
-
-```plaintext
-portfolio/
+```text
+Learning Through Music/
 │
-├── index.html
-├── about.html
-├── skills.html
-├── projects.html
-├── certifications.html
-├── contact.html
-│
-├── css/
-│   └── style.css
-│
-├── js/
-│   └── main.js
-│
-├── images/
-│
-└── assets/
+├── kalyani.py
+└── README.md
 ```
 
-## Future Improvements
+---
 
-- Project Detail Pages
-- Dark / Light Mode
-- Interactive Animations
-- Enhanced Mobile Experience
+## 🚀 Getting Started
 
-## Author
+Clone the repository:
 
-Vinay Gupta
+```bash
+git clone https://github.com/YOUR_USERNAME/Learning-Through-Music.git
+```
 
-Aspiring Software Engineer
+Navigate into the project:
 
-Focused on Python, Backend Development and Data Analysis.
+```bash
+cd Learning-Through-Music
+```
 
-GitHub:
-https://github.com/YOUR_USERNAME
+Run the program:
+
+```bash
+python kalyani.py
+```
+
+---
+
+## 🛠 Technologies Used
+
+* Python 3
+* sys
+* time
+
+---
+
+## 📖 What I Learned
+
+This project helped me practice:
+
+* Working with lists and tuples
+* Looping through timed events
+* Calculating dynamic typing speeds
+* Using `time.sleep()` for synchronization
+* Writing to the terminal with `sys.stdout.write()`
+* Creating smooth console animations
+
+---
+
+## 💡 Future Improvements
+
+* Read lyrics from `.lrc` files
+* Play audio alongside lyrics
+* Dynamic terminal colors
+* Progress bar
+* Pause/Resume support
+* Karaoke-style word highlighting
+* Playlist support
+
+---
+
+## 📜 License
+
+This project is open source and available under the MIT License.
+
+---
+
+### ⭐ If you enjoyed this project, consider giving it a star!
